@@ -10,6 +10,27 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">1</article>
+            <article class="swiper-slide">2</article>
+            <article class="swiper-slide">3</article>
+            <article class="swiper-slide">4</article>
+            <article class="swiper-slide">5</article>
+        </section>
+    </main>
+
+    <script>
+        //기본 스위퍼 연결법
+        const swiper = new Swiper("main",{
+            speed: 500, //패널 넘어가는 속도 (500=0.5초)
+            loop: true, //패널 순환되는 것 (무한 넘김)
+            direction: "horizontal", // "horizontal" 가로넘김, "vertital" 세로넘김
+            grabCursor: true, //마우스커서 손 모양 변경
+            slidesPerView: 3, //숫자값에 따라 패널 갯수 나뉨 "auto":100% 특정크기 지정 (scss>width 값 조정)
+            spaceBetween: 20, //패널사이 간격 (px생략)
+            centeredSlides: true, //활성화 패널을 화면 가운데로 배치(3개 이상 일때)
+        }); 
+    </script>
 </body>
 </html>
